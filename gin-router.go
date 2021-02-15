@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"net/http"
 	"reflect"
@@ -29,7 +28,6 @@ func GlobalHandler(c *gin.Context) {
 func Estimate(c *gin.Context) {
 	var ent Entreprise
 	c.ShouldBindJSON(&ent)
-	fmt.Println(ent)
 	var isValid bool = false
 	var taxRate float64 = 0.0
 	var errorMsg = "Data invalid"
